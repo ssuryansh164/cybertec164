@@ -1,0 +1,352 @@
+.hidden.menu {
+  display: none;
+}
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}
+
+.ui.form .field {
+  margin: 0;
+  padding: 12px 2rem;
+}
+.ui.form .field:first-of-type {
+  padding-bottom: 0;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* make it can click menu when using particles */
+.home-particles {
+  z-index: 1;
+}
+.title-home {
+  font-size: xx-large !important;
+  text-transform: uppercase;
+  padding: 2rem 2rem;
+  color: #21ba45 !important;
+}
+
+.image-card {
+  height: 200px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .card .ui.stackable.grid > .column:not(.row),
+  .card .ui.stackable.grid > .wide.column {
+    padding: 0rem 1rem !important;
+  }
+}
+
+/* chapters css */
+ul.chapters {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  clear: both;
+  display: table;
+}
+
+@media only screen and (max-width: 767px) {
+  ul.chapters {
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+ul.chapters .chapter {
+  font-size: 1rem;
+  border-bottom: 1px solid #324252;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  vertical-align: sub;
+  background: #3e5165;
+  clear: both;
+}
+
+ul.chapters .chapter:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.chapters .chapter:before {
+  content: "\f07b";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+
+ul.chapters .chapter a {
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 0px 17px 45px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+ul.chapters .chapter a:hover {
+  background-color: #324252;
+  transition: 300ms all;
+  color: #2ecc35;
+}
+
+ul.chapters .chapter .lessons {
+  height: 0px;
+  overflow: hidden;
+}
+
+ul.chapters .chapter .lessons a {
+  padding: 17px;
+}
+
+ul.chapters .chapter .lessons a:hover {
+  background-color: #3f5d79;
+  color: #fff;
+  transition: 300ms all;
+}
+ul.chapters .chapter:last-child {
+  border-bottom: none;
+}
+
+ul.chapters .active:after {
+  content: "\f106";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+
+ul.chapters .active:before {
+  content: "\f07c";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+
+ul.chapters .active > .lessons {
+  display: block;
+  background: #23313f;
+  padding: 0px;
+  height: auto;
+  color: #fff;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+ul.chapters .active > .lessons li {
+  padding: 0px;
+  border-bottom: 1px solid #324252;
+  list-style: none;
+}
+
+ul.chapters .active > .lessons li:last-child {
+  border-color: transparent;
+  padding-bottom: 0px;
+}
+ul.chapters .active > .lessons .active > .lessons {
+  background-color: #2f4b67;
+}
+ul.chapters .active > a {
+  color: #2ecc40;
+  font-weight: bold;
+}
+ul.chapters .active .chapter {
+  background: #697d92;
+}
+ul.chapters .active .chapter a {
+  padding: 17px 0px 17px 45px;
+}
+
+.introduction {
+  font-size: 1.2rem;
+}
+
+/* sidebar course */
+/* 
+.sidebar-desktop {
+  width: 100%;
+  height: 600px;
+  border-radius: 4px;
+  text-align: center;
+} */
+
+.sidebar-desktop img {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 767px) {
+  .sidebar-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .sidebar-mobile {
+    display: none;
+  }
+}
+
+.sidebar-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Download Button */
+
+.download-btn {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.download-btn.btn-1 {
+  border: 5px solid #2ecc40;
+}
+
+.download-btn div {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.download-btn .bottom {
+  background: #eee;
+  color: #222;
+}
+.download-btn .top {
+  transition: all 300ms ease-in-out;
+}
+
+.download-btn:hover .top {
+  margin-top: -50px;
+}
+/* End Download Button */
+
+
+/* Media Player */
+.videoplayer iframe {
+  width: 100%;
+  height: 300px;
+}
+@media only screen and (min-width: 576px) {
+  .videoplayer iframe {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .videoplayer iframe {
+    height: 400px;
+  }
+}
+/* End Media Player */
